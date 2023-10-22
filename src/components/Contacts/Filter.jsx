@@ -5,7 +5,13 @@ export default function Filter({ value, onChange }) {
   return (
     <label className={css.input}>
       Find contacts by name
-      <input type="text" name="filter" onChange={onChange} value={value} />
+      <input
+        type="text"
+        name="filter"
+        onChange={onChange}
+        value={value}
+        className={css.input}
+      />
     </label>
   );
 }
