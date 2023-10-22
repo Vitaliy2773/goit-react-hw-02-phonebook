@@ -1,8 +1,9 @@
 import React from 'react';
+import css from './Contacts.module.css';
 
 export default function Filter({ value, onChange }) {
   return (
-    <label>
+    <label className={css.input}>
       Find contacts by name
       <input type="text" name="filter" onChange={onChange} value={value} />
     </label>

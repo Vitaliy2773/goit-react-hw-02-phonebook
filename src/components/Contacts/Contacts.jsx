@@ -3,6 +3,7 @@ import { nanoid } from 'nanoid';
 import ContactForm from './ContactForm';
 import Filter from './Filter';
 import ContactList from './ContactList';
+import css from './Contacts.module.css';
 
 export default class Contact extends Component {
   state = {
@@ -71,8 +72,8 @@ export default class Contact extends Component {
     );
 
     return (
-      <div>
-        <h1>Phonebook</h1>
+      <div className={css.container}>
+        <h1 className={css.title}>Phonebook</h1>
         <ContactForm
           OnChangeName={this.handleChange}
           onChangeNumber={this.handleChange}
@@ -80,7 +81,7 @@ export default class Contact extends Component {
           name={name}
           number={number}
         />
-        <h2>Contacts</h2>
+        <h2 className={css.title}>Contacts</h2>
 
         <Filter onChange={this.changeFilter} value={filter} />
         <ContactList
